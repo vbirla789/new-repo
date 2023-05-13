@@ -262,46 +262,45 @@
 //     console.log('error')
 // }}
 
-// starWarsData()
+starWarsData();
 
-// axios.get("https://swap.dev/api/people/1")
-// .then(res => {
-//     console.log("response" ,res)
-// })
-// .catch(e => {
-//     console.log("error", e)
-// })
+axios
+  .get("https://swap.dev/api/people/1")
+  .then((res) => {
+    console.log("response", res);
+  })
+  .catch((e) => {
+    console.log("error", e);
+  });
 
-// const gameData = async (id) => {
-//     try{
-//     const res= await axios.get(`https://swapi.dev/api/people/${id}`)
-//     console.log(res.data)}
-//     catch (e) {
-//         console.log('err', e)
-//     }
-// }
-// gameData(15)
+const gameData = async (id) => {
+  try {
+    const res = await axios.get(`https://swapi.dev/api/people/${id}`);
+    console.log(res.data);
+  } catch (e) {
+    console.log("err", e);
+  }
+};
+gameData(15);
 
-// const dadJoke = async() => {
-//     const config = {headers: {Accept: 'application/json'}}
-//     const res = await axios.get(" https://icanhazdadjoke.com/", config)
-//     console.log(res.data)
-// }
+const dadJoke = async () => {
+  const config = { headers: { Accept: "application/json" } };
+  const res = await axios.get(" https://icanhazdadjoke.com/", config);
+  console.log(res.data);
+};
 
-// dadJoke()
+dadJoke();
 
-// const momJoke = async() => {
-//     try {
-//     const res = await fetch("https://swapi.dev/api/people/1")
-//     const product = await res.json()
-//     console.log(product)
-//     }
-//     catch (e){
-//         console.log("ERROR!!" ,e)
-//     }
-
-// }
-// momJoke()
+const momJoke = async () => {
+  try {
+    const res = await fetch("https://swapi.dev/api/people/1");
+    const product = await res.json();
+    console.log(product);
+  } catch (e) {
+    console.log("ERROR!!", e);
+  }
+};
+momJoke();
 
 const play = {
   title: "VIIBII",
